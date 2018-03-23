@@ -10,5 +10,5 @@ app.use(express.static(__dirname + '/public'))
 app.get('/main', (request, response) => {
 
 })
-//trevor test comment #YEET
+
 app.listen(8080);
