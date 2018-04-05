@@ -1,5 +1,8 @@
 Canada
+  Banff National Park 51.4968° N, 115.9281° W
+  CN Tower 43.6426° N, 79.3871° W
 USA
+  Central Park 40.7829° N, 73.9654° W
 Russia
 China
 Japan
