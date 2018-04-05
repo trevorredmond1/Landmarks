@@ -1,11 +1,20 @@
 Canada
   Banff National Park 51.4968° N, 115.9281° W
   CN Tower 43.6426° N, 79.3871° W
+  Stanley Park 49.3017° N, 123.1417° W
 USA
   Central Park 40.7829° N, 73.9654° W
+  Golden Gates Bridge 37.8199° N, 122.4783° W
+  Statue of Liberty 40.6892° N, 74.0445° W
 Russia
+  Moscow Kremlin 55.7520° N, 37.6175° E
+  Red Square 55.7539° N, 37.6208° E
 China
+  Tiananmen Square 39.9055° N, 116.3976° E
 Japan
+  Kinkaku-ji 35.0394° N, 135.7292° E
+  Senso-ji 35.7148° N, 139.7967° E
+  Tokyo Tower 35.6586° N, 139.7454° E
 Italy
 Greece
 France
