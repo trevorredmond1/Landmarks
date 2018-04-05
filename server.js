@@ -1,14 +1,19 @@
 //constants
 const hbs = require('hbs');
 const express = require('express');
+const port = process.env.port || 8080;
 
 //static content
 var app = express();
-app.use(express.static(__dirname + '/public'))
+hbs.registerPartials(__dirname + '/views/partials');
+app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'hbs');
 
 //main page
 app.get('/', (request, response) => {
   response.render('mainapp.hbs');
-})
+});
 
-app.listen(8080);
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
+});
