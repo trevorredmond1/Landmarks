@@ -6,7 +6,7 @@ const port = process.env.port || 8080;
 //static content
 var app = express();
 hbs.registerPartials(__dirname + '/views/partials');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'hbs');
 
 //main page
