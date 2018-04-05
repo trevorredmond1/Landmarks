@@ -25,6 +25,8 @@ var getAddress = (address, callback) => {
 
 };
 
+var GoogleMapsAPIkey = AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8
+
 module.exports = {
     getAddress
 };
