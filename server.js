@@ -1,11 +1,7 @@
 //constants
 const hbs = require('hbs');
 const express = require('express');
-<<<<<<< HEAD
-const geocode = require('request');
-=======
 const port = process.env.port || 8080;
->>>>>>> 256918fa300fc82f4c0079a417de438e3f65341c
 
 //static content
 var app = express();
