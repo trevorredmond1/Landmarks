@@ -19,5 +19,5 @@ function initMap() {
 }
 
 module.exports = {
-    getAddress
+    initMap
 };
