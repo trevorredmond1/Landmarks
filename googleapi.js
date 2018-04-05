@@ -1,31 +1,22 @@
-const request = require('request');
+const request = require('request')
 
-var getAddress = (address, callback) => {
+var GoogleMapsAPIkey = 'AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8'
 
-    request({
-        //url: 'http://maps.googleapis.com/maps/api/geocode/json?address=folwark%20leszcyznowka',
-        url: 'http://maps.googleapis.com/maps/api/geocode/json' +
-            '?address=' + encodeURIComponent(address),
-        json: true
-    }, (error, response, body) => {
-        if (error) {
-            callback('Cannot connect to Google Maps');
-        } else if (body.status === 'ZERO_RESULTS') {
-            callback('Cannot find requested address');
-        } else if (body.status === 'OK') {
-            callback(undefined, {
-                address: body.results[0].formatted_address,
-                type: body.results[0].types[0]
-            });
-            //console.log(`Your requested venue: ${address}`);
-            //console.log(`Address: ${body.results[0].formatted_address}`);
-            //console.log(`Type: ${body.results[0].types[0]}`);
-        }
-    });
+function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 
-};
+ async defer
+src='http://maps.googleapis.com/maps/api/geocode/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap'>
 
-var GoogleMapsAPIkey = AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8
 
 module.exports = {
     getAddress
