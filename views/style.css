@@ -43,3 +43,13 @@
 .countryselect:hover .dropdown {
   background-color: grey;
 }
+
+/*the map*/
+
+#map {
+  height: 50vh;
+  width: 50vw;
+  top: 30%;
+  right: 30%;
+  position: absolute;
+}
