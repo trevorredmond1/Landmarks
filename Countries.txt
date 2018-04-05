@@ -9,8 +9,11 @@ USA
 Russia
   Moscow Kremlin 55.7520° N, 37.6175° E
   Red Square 55.7539° N, 37.6208° E
+  Hermitage Museum 59.9398° N, 30.3146° E
 China
-  Tiananmen Square 39.9055° N, 116.3976° E
+  Tiananmen Square 39.9055° N, 116.3976°
+  Forbidden City 39.9163° N, 116.3972° E
+  Summer Palace 40.0000° N, 116.2755° E
 Japan
   Kinkaku-ji 35.0394° N, 135.7292° E
   Senso-ji 35.7148° N, 139.7967° E
