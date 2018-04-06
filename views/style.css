@@ -2,8 +2,8 @@
 .countryselect {
   position: absolute;
   display:inline-block;
-    left: 2.5%;
-    top:5%;
+    left:5%;
+    top:3%;
 }
 
 /*dropdown button*/
@@ -49,7 +49,33 @@
 #map {
   height: 50vh;
   width: 50vw;
-  top: 30%;
+  top: 20%;
   right: 30%;
   position: absolute;
+}
+
+/*the three landmarks that show info */
+
+#firstcountry {
+  position: absolute;
+  height: 25%;
+  width:20%;
+  top: 15%;
+  background-color: black;
+}
+
+#secondcountry {
+  position: absolute;
+  height: 25%;
+  width: 20%;
+  top: 43%;
+  background-color: black;
+}
+
+#thirdcountry {
+  position: absolute;
+  height: 25%;
+  width: 20%;
+  top: 72%;
+  background-color: black;
 }
