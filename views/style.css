@@ -53,3 +53,29 @@
   right: 30%;
   position: absolute;
 }
+
+/*the three landmarks that show info */
+
+#firstcountry {
+  position: absolute;
+  height: 30%;
+  width:40%;
+  top: 20%;
+  background-color: black;
+}
+
+#secondcountry {
+  position: absolute;
+  height: 30%;
+  width: 40%;
+  top: 45%;
+  background-color: black;
+}
+
+#thirdcountry {
+  position: absolute;
+  height: 30%;
+  width: 40%;
+  top: 65%;
+  background-color: black;
+}
