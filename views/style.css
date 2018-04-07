@@ -93,23 +93,21 @@
 }
 
 #login {
-  position: absolute;
+  position: relative;
   border-width: thick;
   border-style: solid;
-  top: 40%;
-  left: 35%;
-  width:25%;
-  height: 5%;
+  left: 200%;
+  width:150%;
+  height: 40%;
 }
 
 #password {
-  position: absolute;
+  position: relative;
   border-width: thick;
   border-style: solid;
-  top: 55%;
-  left: 35%;
-  width: 25%;
-  height: 5%;
+  left: 300%;
+  width:150%;
+  height: 40%;
 }
 
 #credentialsinfo {
