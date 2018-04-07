@@ -1,23 +1,56 @@
-const request = require('request')
+var Countries= {Canada: {center: {
+                            coor: {lat: 51.4968, lng: -100.9281}
+                            },
+                         location1: {
+                            coor: {lat: 51.4968, lng: -115.9281},
+                            picture: ""},
+                         location2: {
+                            coor: {lat: 43.6426, lng: -79.3871},
+                            picture: ""},
+                         location3: {
+                            coor: {lat: 49.3017, lng: -123.1417},
+                            picture: ""},
+                        }
+               }
 
-var GoogleMapsAPIkey = 'AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8'
 
-function initMap() {
-  var marker =""
-  var locations = [{lat: 51.4968, lng: -115.9281},{lat: 43.6426, lng: -79.3871},{lat: 49.3017, lng: -123.1417},{lat: 40.7829, lng: -73.9654},{lat: 37.8199, lng: -122.4783},{lat: 40.6892, lng: -74.0445},{lat: 55.7520, lng: 37.6175},{lat: 55.7539, lng: 37.6208}, {lat:}];
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: {lat: 51.4968, lng: -115.9281}
-  });
 
-  for (var i =0; i < locations.length; i++){
-  marker = new google.maps.Marker({
-    position: locations[i],
-    map: map
-  });
+
+/*---------------------Initializes a map-------------------------------------*/
+
+ function initMap() {
+        var marker =""
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat: 51.4968, lng: -115.9281}
+        });
+
+ }
+
+function changeMap(center, location1, location2, location3) {
+        var marker =""
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: center
+        });
+
+        var locations = [location1, location2, location3];
+
+        for (var i =0; i < locations.length; i++){
+        marker = new google.maps.Marker({
+          position: locations[i],
+          map: map
+        });
+      }
+      }
+
+function changeImage(div, image){
+    div.image = image
 }
-}
 
-module.exports = {
-    initMap
-};
+document.getElementById('Canada').addEventListener("click", function(){
+    changeMap(Countries.Canada.center.coor,Countries.Canada.location1.coor,Countries.Canada.location2.coor, Countries.Canada.location3.coor)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.Canada.location+ i +.picture)
+    }
+});

@@ -79,3 +79,43 @@
   top: 72%;
   background-color: black;
 }
+
+/*this is for the login page*/
+
+#loginbox {
+  position: absolute;
+  top:30%;
+  left:28%;
+  width: 45%;
+  height: 45%;
+  border-style: solid;
+  border-width: thick;
+}
+
+#login {
+  position: absolute;
+  border-width: thick;
+  border-style: solid;
+  top: 40%;
+  left: 35%;
+  width:25%;
+  height: 5%;
+}
+
+#password {
+  position: absolute;
+  border-width: thick;
+  border-style: solid;
+  top: 55%;
+  left: 35%;
+  width: 25%;
+  height: 5%;
+}
+
+#credentialsinfo {
+  position: absolute;
+  top: 5%;
+  width: 10%;
+  height: 10%;
+
+}
