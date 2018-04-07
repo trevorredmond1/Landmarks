@@ -3,13 +3,13 @@ var Countries= {Canada: {center: {
                             },
                          location1: {
                             coor: {lat: 51.4968, lng: -115.9281},
-                            picture: ""},
+                            picture: url(picture/banffpark.jpg)},
                          location2: {
                             coor: {lat: 43.6426, lng: -79.3871},
-                            picture: ""},
+                            picture: url(picture/cntower.jpg)},
                          location3: {
                             coor: {lat: 49.3017, lng: -123.1417},
-                            picture: ""},
+                            picture: url(picture/stanleypark.jpg)},
                         }
                }
 
