@@ -14,6 +14,10 @@ app.get('/', (request, response) => {
   response.render('mainapp.hbs');
 });
 
+app.get('/main', (request, response) => {
+  response.sendFile('mainapp.html');
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
