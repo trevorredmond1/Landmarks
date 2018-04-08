@@ -136,3 +136,30 @@
     left:40%;
     width:15%;
 }
+
+#firstcountryinfo {
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    right: 22%;
+    top: 10%;
+    background-color: black;
+}
+
+#secondcountryinfo {
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    background-color: black;
+    top:37.5%;
+    right: 22%;
+}
+
+#thirdcountryinfo {
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    background-color: black;
+    right: 22%;
+    top:65.5%
+}
