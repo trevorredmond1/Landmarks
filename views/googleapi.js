@@ -209,7 +209,7 @@ document.getElementById('Mexico').addEventListener("click", function(){
 function showMe(whichdiv, whicharrow){
     var info = whichdiv;
     var pointer = whicharrow;
-    if (info.style.display == "none") && (pointer.style.display == "none") {
+    if (info.style.display == "none" && pointer.style.display == "none") {
         info.style.display = "block";
         pointer.style.display = "block";
     } else {
