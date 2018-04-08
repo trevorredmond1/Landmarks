@@ -93,8 +93,8 @@ var Countries= {Canada: {center: {
                          zoom: 7
                         },
                 Mexico: {center: {
-                            coor: {lat:35.3394,
-                                 lng: 137.7292}
+                            coor: {lat:19.3394,
+                                 lng: -93.7292}
                             },
                          locations: [{
                              coor: {
@@ -109,7 +109,7 @@ var Countries= {Canada: {center: {
                                     lat: 17.043889,
                                     lng: -96.767778},
                              picture: "pictures/montealban.jpg"}],
-                         zoom: 7
+                         zoom: 6
                         },
 
             }

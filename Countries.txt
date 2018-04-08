@@ -30,6 +30,9 @@ India
 Japan
 Thailand
 Mexico
+  Pyramid of the Magician, Uxmal 20.359444, -89.771389
+  Coba 20.494722, -87.736111
+  Monte Alban 17.043889, -96.767778
 Brazil
 Korea
 Egypt
