@@ -1,15 +1,19 @@
 var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
                             },
-                         location1: {
-                            coor: {lat: 51.4968, lng: -115.9281},
-                            picture: "picture/banffpark.jpg"},
-                         location2: {
-                            coor: {lat: 43.6426, lng: -79.3871},
-                            picture: "picture/cntower.jpg"},
-                         location3: {
-                            coor: {lat: 49.3017, lng: -123.1417},
-                            picture: "picture/stanleypark.jpg"},
+                         locations: [{
+                             coor: {
+                                 lat: 51.4968,
+                                 lng: -115.9281},
+                             picture: "pictures/banffpark.jpg"},{
+                             coor: {
+                                    lat: 43.6426,
+                                    lng: -79.3871},
+                             picture: "pictures/cntower.jpg"},{
+                             coor: {
+                                    lat: 49.3017,
+                                    lng: -123.1417},
+                             picture: "pictures/stanleypark.jpg"}]
                         }
                }
 
@@ -46,17 +50,16 @@ function changeMap(center, location1, location2, location3) {
 
 function changeImage(div, image){
   if (div == 0){
-    document.getElementById('firstcountry').style.image = "url(" + image + ")"}
-  }
+    document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")"}
   else if (div == 1){
-    document.getElementById('secondcountry').style.image = "url(" + image + ")"}
-  }
+    document.getElementById('secondcountry').style.backgroundImage = "url(" + image + ")"}
   else if (div == 2){
-    document.getElementById('thirdcountry').style.image = "url(" + image  + ")"}
-  }
+    document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")"}
+
+}
 
 document.getElementById('Canada').addEventListener("click", function(){
-    changeMap(Countries.Canada.center.coor,Countries.Canada.location[1].coor,Countries.Canada.location[2].coor, Countries.Canada.location[3].coor)
+    changeMap(Countries.Canada.center.coor,Countries.Canada.locations[0].coor,Countries.Canada.locations[1].coor, Countries.Canada.locations[2].coor)
     for (var i = 0; i < 3; i++){
         changeImage(i, Countries.Canada.locations[i].picture)
     }
