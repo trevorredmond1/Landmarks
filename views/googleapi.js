@@ -196,3 +196,10 @@ document.getElementById('Japan').addEventListener("click", function(){
         changeImage(i, Countries.Japan.locations[i].picture)
     }
 });
+
+document.getElementById('Mexico').addEventListener("click", function(){
+    changeMap(Countries.Mexico.center.coor,Countries.Mexico.locations, Countries.Mexico.zoom)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.Mexico.locations[i].picture)
+    }
+});
