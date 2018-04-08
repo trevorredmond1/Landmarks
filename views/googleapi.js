@@ -73,8 +73,9 @@ var Countries= {Canada: {center: {
                          zoom: 11
                         },
                 Japan: {center: {
-                            coor: {lat:35.3394,
-                                 lng: 137.7292}
+                            coor: {
+                              lat:35.3394,
+                              lng: 137.7292}
                             },
                          locations: [{
                              coor: {
@@ -91,6 +92,26 @@ var Countries= {Canada: {center: {
                              picture: "pictures/tokyotower.jpg"}],
                          zoom: 7
                         },
+                Mexico: {center: {
+                            coor: {lat:35.3394,
+                                 lng: 137.7292}
+                            },
+                         locations: [{
+                             coor: {
+                                 lat:20.359444,
+                                 lng: -89.771389},
+                             picture: "pictures/uxmal.jpg"},{
+                             coor: {
+                                    lat: 20.49472,
+                                    lng: -87.736111},
+                             picture: "pictures/coba.jpg"},{
+                             coor: {
+                                    lat: 17.043889,
+                                    lng: -96.767778},
+                             picture: "pictures/montealban.jpg"}],
+                         zoom: 7
+                        },
+
             }
 
 
