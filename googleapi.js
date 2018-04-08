@@ -13,9 +13,64 @@ var Countries= {Canada: {center: {
                              coor: {
                                     lat: 49.3017,
                                     lng: -123.1417},
-                             picture: "pictures/stanleypark.jpg"}]
-                        }
-               }
+                             picture: "pictures/stanleypark.jpg"}],
+                         zoom: 4
+                        },
+                USA: {center: {
+                            coor: {lat: 38.4968, lng: -100}
+                            },
+                         locations: [{
+                             coor: {
+                                 lat: 40.7829,
+                                 lng: -73.9654},
+                             picture: "pictures/centralpark.jpg"},{
+                             coor: {
+                                    lat: 37.8199,
+                                    lng: -122.4783},
+                             picture: "pictures/goldengatebridge.jpg"},{
+                             coor: {
+                                    lat: 40.6892,
+                                    lng: -74.0445},
+                             picture: "pictures/statueofliberty.jpg"}],
+                      zoom: 4
+                        },
+                Russia: {center: {
+                            coor: {lat: 58.7520, lng: 33.6175}
+                            },
+                         locations: [{
+                             coor: {
+                                 lat: 55.7520,
+                                 lng: 37.6175},
+                             picture: "pictures/moscowkremlin.jpg"},{
+                             coor: {
+                                    lat: 55.7539,
+                                    lng: 37.6208},
+                             picture: "pictures/redsquare.jpg"},{
+                             coor: {
+                                    lat: 59.9398,
+                                    lng: 30.3146},
+                             picture: "pictures/hermitage.jpg"}],
+                         zoom: 5
+                        },
+                China: {center: {
+                            coor: {lat: 39.95, lng: 116.3}
+                            },
+                         locations: [{
+                             coor: {
+                                 lat:39.9055,
+                                 lng: 116.3976},
+                             picture: "pictures/tiananmensquare.jpg"},{
+                             coor: {
+                                    lat: 39.9163,
+                                    lng: 116.3972},
+                             picture: "pictures/forbiddencity.jpg"},{
+                             coor: {
+                                    lat: 40.0000,
+                                    lng: 116.2755},
+                             picture: "pictures/summerpalace.jpg"}],
+                         zoom: 11
+                        },
+            }
 
 
 
@@ -31,18 +86,18 @@ var Countries= {Canada: {center: {
 
  }
 
-function changeMap(center, location1, location2, location3) {
+function changeMap(center, locations, zoom) {
         var marker =""
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: zoom,
           center: center
         });
 
-        var locations = [location1, location2, location3];
+        var locations = locations;
 
         for (var i =0; i < locations.length; i++){
         marker = new google.maps.Marker({
-          position: locations[i],
+          position: locations[i].coor,
           map: map
         });
       }
@@ -59,8 +114,29 @@ function changeImage(div, image){
 }
 
 document.getElementById('Canada').addEventListener("click", function(){
-    changeMap(Countries.Canada.center.coor,Countries.Canada.locations[0].coor,Countries.Canada.locations[1].coor, Countries.Canada.locations[2].coor)
+    changeMap(Countries.Canada.center.coor,Countries.Canada.locations,Countries.Canada.zoom)
     for (var i = 0; i < 3; i++){
         changeImage(i, Countries.Canada.locations[i].picture)
+    }
+});
+
+document.getElementById('USA').addEventListener("click", function(){
+    changeMap(Countries.USA.center.coor,Countries.USA.locations,Countries.USA.zoom)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.USA.locations[i].picture)
+    }
+});
+
+document.getElementById('Russia').addEventListener("click", function(){
+    changeMap(Countries.Russia.center.coor,Countries.Russia.locations, Countries.Russia.zoom)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.Russia.locations[i].picture)
+    }
+});
+
+document.getElementById('China').addEventListener("click", function(){
+    changeMap(Countries.China.center.coor,Countries.China.locations, Countries.China.zoom)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.China.locations[i].picture)
     }
 });
