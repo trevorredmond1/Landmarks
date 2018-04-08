@@ -61,7 +61,8 @@
   height: 25%;
   width:20%;
   top: 15%;
-  background-color: black;
+  border-style: solid;
+  border-width: thick;
   background-size: cover;
 }
 
@@ -70,7 +71,8 @@
   height: 25%;
   width: 20%;
   top: 43%;
-  background-color: black;
+  border-style: solid;
+  border-width: thick;
   background-size: cover;
 }
 
@@ -79,7 +81,8 @@
   height: 25%;
   width: 20%;
   top: 72%;
-  background-color: black;
+  border-width: thick;
+  border-style: solid;
   background-size: cover;
 }
 
