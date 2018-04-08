@@ -2,7 +2,7 @@
 .countryselect {
   position: absolute;
   display:inline-block;
-    left:5%;
+    left:4.5%;
     top:3%;
 }
 
@@ -47,11 +47,13 @@
 /*the map*/
 
 #map {
-  height: 50vh;
-  width: 50vw;
-  top: 20%;
-  right: 40%;
+  height: 81vh;
+  width: 60vw;
+  top: 9%;
+  right: 22%;
   position: absolute;
+  border-width: thick;
+  border-style: solid;
 }
 
 /*the three landmarks that show info */
@@ -60,7 +62,8 @@
   position: absolute;
   height: 25%;
   width:20%;
-  top: 15%;
+  top: 9%;
+  right:1%;
   border-style: solid;
   border-width: thick;
   background-size: cover;
@@ -70,7 +73,8 @@
   position: absolute;
   height: 25%;
   width: 20%;
-  top: 43%;
+  top: 37%;
+  right:1%;
   border-style: solid;
   border-width: thick;
   background-size: cover;
@@ -80,7 +84,8 @@
   position: absolute;
   height: 25%;
   width: 20%;
-  top: 72%;
+  top: 65%;
+  right:1%;
   border-width: thick;
   border-style: solid;
   background-size: cover;
