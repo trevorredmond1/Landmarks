@@ -70,6 +70,25 @@ var Countries= {Canada: {center: {
                              picture: "pictures/summerpalace.jpg"}],
                          zoom: 11
                         },
+                Japan: {center: {
+                            coor: {lat:35.3394,
+                                 lng: 137.7292}
+                            },
+                         locations: [{
+                             coor: {
+                                 lat:35.0394,
+                                 lng: 135.7292},
+                             picture: "pictures/kinkakuji.jpg"},{
+                             coor: {
+                                    lat: 35.7148,
+                                    lng: 139.7967},
+                             picture: "pictures/sensoji.jpg"},{
+                             coor: {
+                                    lat: 35.6586,
+                                    lng: 139.7454},
+                             picture: "pictures/tokyotower.jpg"}],
+                         zoom: 7
+                        },
             }
 
 
@@ -138,5 +157,12 @@ document.getElementById('China').addEventListener("click", function(){
     changeMap(Countries.China.center.coor,Countries.China.locations, Countries.China.zoom)
     for (var i = 0; i < 3; i++){
         changeImage(i, Countries.China.locations[i].picture)
+    }
+});
+
+document.getElementById('Japan').addEventListener("click", function(){
+    changeMap(Countries.Japan.center.coor,Countries.Japan.locations, Countries.Japan.zoom)
+    for (var i = 0; i < 3; i++){
+        changeImage(i, Countries.Japan.locations[i].picture)
     }
 });
