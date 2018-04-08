@@ -1,3 +1,5 @@
+/*-------------------------DICTIONARY OF COUNTRIES AND PLACES---------------------------------------------------*/
+
 var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
                             },
@@ -93,6 +95,7 @@ var Countries= {Canada: {center: {
 
 
 
+/*---------------------FUNCTIONS-------------------------------*/
 
 /*---------------------Initializes a map-------------------------------------*/
 
@@ -104,6 +107,8 @@ var Countries= {Canada: {center: {
         });
 
  }
+
+/*-------------------------------Changes the map markers-------------------------------*/
 
 function changeMap(center, locations, zoom) {
         var marker =""
@@ -122,6 +127,8 @@ function changeMap(center, locations, zoom) {
       }
       }
 
+/*------------------------------------Changes the images on the left side---------------------------*/
+
 function changeImage(div, image){
   if (div == 0){
     document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")"}
@@ -131,6 +138,8 @@ function changeImage(div, image){
     document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")"}
 
 }
+
+/*-----------------------------COUNTRY BUTTONS-----------------------------------*/
 
 document.getElementById('Canada').addEventListener("click", function(){
     changeMap(Countries.Canada.center.coor,Countries.Canada.locations,Countries.Canada.zoom)
