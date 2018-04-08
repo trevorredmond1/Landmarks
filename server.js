@@ -15,7 +15,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/main', (request, response) => {
-  response.sendFile('mainapp.html');
+  response.sendFile(__dirname + '/views/mainapp.html');
 });
 
 app.listen(port, () => {
