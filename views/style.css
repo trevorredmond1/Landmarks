@@ -145,6 +145,7 @@
     top: 10%;
     border-style: solid;
     border-width: thick;
+    display: none;
 }
 
 #secondcountryinfo {
@@ -155,6 +156,7 @@
     right: 22%;
     border-style: solid;
     border-width: thick;
+    display: none;
 }
 
 #thirdcountryinfo {
@@ -165,6 +167,7 @@
     top:65.5%;
     border-style: solid;
     border-width: thick;
+    display: none;
 }
 
 #arrowone{
@@ -176,6 +179,7 @@
     background-image: url(pictures/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
+    display: none;
 
 }
 
@@ -188,7 +192,7 @@
     background-image: url(pictures/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
-
+    display: none;
 }
 
 
@@ -201,5 +205,5 @@
     background-image: url(pictures/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
-
+    display: none;
 }
