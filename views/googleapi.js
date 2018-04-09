@@ -252,6 +252,7 @@ document.getElementById('Mexico').addEventListener("click", function(){
 
 /*----------------------------------makes info for clicking on picture-------------*/
 
+/*
 function showMe(whichdiv, whicharrow){
     var info = whichdiv;
     var pointer = whicharrow;
@@ -263,15 +264,28 @@ function showMe(whichdiv, whicharrow){
         pointer.style.display = "none";
     }
 }
+*/
 
-document.getElementById('firstcountry').addEventListener("click", function(){
-  showMe(document.getElementById("firstcountryinfo"), document.getElementById("arrowone"));
-});
+var showfirstcountry = document.getElementById("firstcountryinfo")
+        showfirstcountry.addEventListener("mouseover", function() {
+            showfirstcountry.style.display=block;
+        });
+        showfirstcountry.addEventListener("mouseleave", function() {
+            showfirstcountry.style.display=none;
+        });
 
-document.getElementById('secondcountry').addEventListener("click", function(){
-  showMe(document.getElementById("secondcountryinfo"), document.getElementById("arrowtwo"));
-})
+var showsecondcountry = document.getElementById("secondcountryinfo")
+        showsecondcountry.addEventListener("mouseover", function() {
+            showsecondcountry.style.display=block;
+        });
+        showsecondcountry.addEventListener("mouseleave", function() {
+            showsecondcountry.style.display=none;
+        });
 
-document.getElementById('thirdcountry').addEventListener("click", function(){
-  showMe(document.getElementById("thirdcountryinfo"), document.getElementById("arrowthree"));
-})
+var showthirdcountry = document.getElementById("thirdcountryinfo")
+        showthirdcountry.addEventListener("mouseover", function() {
+            showthirdcountry.style.display=block;
+        });
+        showthirdcountry.addEventListener("mouseleave", function() {
+            showthirdcountry.style.display=none;
+        });
