@@ -307,7 +307,8 @@ document.getElementById("save3").addEventListener("click", function(){
 });
 
 document.getElementById('savedshow').addEventListener("click", function(){
+  document.getElementById('displaysaved').innerHTML =""
   for (var n in favouritesList){
-    document.getElementById('displaysaved').innerHTML += favouritesList[n]+"<br>"
+    document.getElementById('displaysaved').innerHTML += "" + favouritesList[n]+"<br>"
 }
 })
