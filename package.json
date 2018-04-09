@@ -19,7 +19,7 @@
   "homepage": "https://github.com/waikitng/landmarks#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "fs": "0.0.1-security",
+    "fs": "file:node_modules/fs",
     "hbs": "^4.0.1",
     "request": "^2.85.0",
     "yargs": "^11.0.0"
