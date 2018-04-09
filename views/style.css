@@ -57,7 +57,7 @@
 #map {
   height: 81vh;
   width: 60vw;
-  top: 9%;
+  top: 15%;
   right: 22%;
   position: absolute;
   border-width: thick;
@@ -70,7 +70,7 @@
   position: absolute;
   height: 25%;
   width:20%;
-  top: 9%;
+  top: 15%;
   right:1%;
   border-style: solid;
   border-width: thick;
@@ -81,7 +81,7 @@
   position: absolute;
   height: 25%;
   width: 20%;
-  top: 37%;
+  top: 43%;
   right:1%;
   border-style: solid;
   border-width: thick;
@@ -92,7 +92,7 @@
   position: absolute;
   height: 25%;
   width: 20%;
-  top: 65%;
+  top: 71%;
   right:1%;
   border-width: thick;
   border-style: solid;
@@ -159,7 +159,7 @@
 
 
 #firstcountryinfo {
-    top: 9%;
+    top: 15%;
     height: 25%;
     width:20%;
     right:1%;
@@ -168,7 +168,7 @@
 }
 
 #secondcountryinfo {
-    top:37%;
+    top:43%;
     height: 25%;
     width:20%;
     right:1%;
@@ -178,7 +178,7 @@
 
 #thirdcountryinfo {
     right: 22%;
-    top:65%;
+    top:71%;
     height: 25%;
     width:20%;
     right:1%;
@@ -245,4 +245,10 @@
   left:0px;
   right: 0px;
   margin: auto;
+}
+
+#pagetitle {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3vw;
 }
