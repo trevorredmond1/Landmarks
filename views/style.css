@@ -212,13 +212,15 @@
 }
 
 #savedemail {
+  width:90%;
   position:absolute;
   top:5%;
-  left:12%;
+  left:5%;
 }
 
 #savedshow {
+  width:90%;
   position:absolute;
   top: 15%;
-  left:12%;
+  left:5%;
 }
