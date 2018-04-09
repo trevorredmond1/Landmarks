@@ -11,7 +11,7 @@
   position: absolute;
   display:inline-block;
     left:4.5%;
-    top:3%;
+    top:5%;
 }
 
 /*dropdown button*/
@@ -198,4 +198,15 @@
     bottom:30%;
     left: 20%;
     display: block;
+}
+
+#savedplaces {
+  height: 50vh;
+  width: 12vw;
+  top: 40%;
+  left: 2.5%;
+  position: absolute;
+  background-color: white;
+  border-width: thick;
+  border-style: solid;
 }
