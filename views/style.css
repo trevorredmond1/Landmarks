@@ -210,3 +210,15 @@
   border-width: thick;
   border-style: solid;
 }
+
+#savedemail {
+  position:absolute;
+  top:5%;
+  left:12%;
+}
+
+#savedshow {
+  position:absolute;
+  top: 15%;
+  left:12%;
+}
