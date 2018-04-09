@@ -223,15 +223,15 @@
   width:90%;
   height:6%;
   position:absolute;
-  top: 15%;
+  top: 2%;
   left:5%;
 }
 
 #displaysaved {
   width:90%;
-  height:73.5%;
+  height:86.5%;
   position:absolute;
-  top:23%;
+  top:10%;
   left:2.5%;
   border-width: thick;
   border-style: solid;
