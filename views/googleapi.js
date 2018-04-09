@@ -214,13 +214,19 @@ function changeMap(center, locations, zoom) {
 
 /*------------------------------------Changes the images on the right side---------------------------*/
 
-function changeImage(div, image){
+function changeImage(div, image, dtitle){
   if (div == 0){
-    document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")"}
+    document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('title1').innerHTML= dtitle
+  }
   else if (div == 1){
-    document.getElementById('secondcountry').style.backgroundImage = "url(" + image + ")"}
+    document.getElementById('secondcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('title2').innerHTML = dtitle
+  }
   else if (div == 2){
-    document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")"}
+    document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('title3').innerHTML= dtitle
+  }
 
 }
 
@@ -229,42 +235,48 @@ function changeImage(div, image){
 document.getElementById('Canada').addEventListener("click", function(){
     changeMap(Countries.Canada.center.coor,Countries.Canada.locations,Countries.Canada.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Canada.locations[i].picture)
+        name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>"
+        changeImage(i, Countries.Canada.locations[i].picture, name)
     }
 });
 
 document.getElementById('USA').addEventListener("click", function(){
     changeMap(Countries.USA.center.coor,Countries.USA.locations,Countries.USA.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.USA.locations[i].picture)
+        name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>";
+        changeImage(i, Countries.USA.locations[i].picture, name)
     }
 });
 
 document.getElementById('Russia').addEventListener("click", function(){
     changeMap(Countries.Russia.center.coor,Countries.Russia.locations, Countries.Russia.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Russia.locations[i].picture)
+      name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>";
+        changeImage(i, Countries.Russia.locations[i].picture, name)
     }
 });
 
 document.getElementById('China').addEventListener("click", function(){
     changeMap(Countries.China.center.coor,Countries.China.locations, Countries.China.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.China.locations[i].picture)
+      name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>";
+        changeImage(i, Countries.China.locations[i].picture, name)
     }
 });
 
 document.getElementById('Japan').addEventListener("click", function(){
     changeMap(Countries.Japan.center.coor,Countries.Japan.locations, Countries.Japan.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Japan.locations[i].picture)
+      name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>";
+        changeImage(i, Countries.Japan.locations[i].picture, name)
     }
 });
 
 document.getElementById('Mexico').addEventListener("click", function(){
     changeMap(Countries.Mexico.center.coor,Countries.Mexico.locations, Countries.Mexico.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Mexico.locations[i].picture)
+      name = "<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>";
+        changeImage(i, Countries.Mexico.locations[i].picture, name)
     }
 });
 
