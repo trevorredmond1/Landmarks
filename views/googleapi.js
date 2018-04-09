@@ -242,7 +242,7 @@ document.getElementById('Canada').addEventListener("click", function(){
 document.getElementById('USA').addEventListener("click", function(){
     changeMap(Countries.USA.center.coor,Countries.USA.locations,Countries.USA.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.USA.locations[i].picture, Countries.Canada.locations[i].title)
+        changeImage(i, Countries.USA.locations[i].picture, Countries.USA.locations[i].title)
     }
 });
 
