@@ -268,24 +268,24 @@ function showMe(whichdiv, whicharrow){
 
 var showfirstcountry = document.getElementById("firstcountryinfo")
         showfirstcountry.addEventListener("mouseover", function() {
-            showfirstcountry.style.display=block;
+            showfirstcountry.style.display="block";
         });
         showfirstcountry.addEventListener("mouseleave", function() {
-            showfirstcountry.style.display=none;
+            showfirstcountry.style.display="none";
         });
 
 var showsecondcountry = document.getElementById("secondcountryinfo")
         showsecondcountry.addEventListener("mouseover", function() {
-            showsecondcountry.style.display=block;
+            showsecondcountry.style.display="block";
         });
         showsecondcountry.addEventListener("mouseleave", function() {
-            showsecondcountry.style.display=none;
+            showsecondcountry.style.display="none";
         });
 
 var showthirdcountry = document.getElementById("thirdcountryinfo")
         showthirdcountry.addEventListener("mouseover", function() {
-            showthirdcountry.style.display=block;
+            showthirdcountry.style.display="block";
         });
         showthirdcountry.addEventListener("mouseleave", function() {
-            showthirdcountry.style.display=none;
+            showthirdcountry.style.display="none";
         });
