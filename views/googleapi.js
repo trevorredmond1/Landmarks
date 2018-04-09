@@ -1,4 +1,4 @@
-
+const save = require("/save.js");
 
 /*-------------------------JSON OF COUNTRIES AND PLACES---------------------------------------------------*/
 
@@ -299,3 +299,9 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
         showthirdcountry.addEventListener("mouseleave", function() {
             showthirdcountry.style.display="none";
         });
+
+/*-----------------------------------------get email info---------------------------*/
+
+document.getElementById("save").addEventListener("click", function(){
+  var entry = document.getElementById("text").value;
+});
