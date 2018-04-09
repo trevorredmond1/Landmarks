@@ -276,21 +276,6 @@ document.getElementById('Mexico').addEventListener("click", function(){
 
 /*----------------------------------makes info for clicking on picture-------------*/
 
-/*
-function showMe(whichdiv, whicharrow){
-    var info = whichdiv;
-    var pointer = whicharrow;
-    if (info.style.display == "none" && pointer.style.display == "none") {
-        info.style.display = "block";
-        pointer.style.display = "block";
-    } else {
-        info.style.display = "none";
-        pointer.style.display = "none";
-    }
-}
-*/
-
-
 var showfirstcountry = document.getElementById("firstcountryinfo")
         document.getElementById("firstcountry").addEventListener("mouseover", function() {
             showfirstcountry.style.display="block";
