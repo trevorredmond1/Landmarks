@@ -149,6 +149,7 @@ function Savelocations(button,location){
       obj.saved_locations.push({name: location})
     }
   })
+}
 
 /*---------------------Initializes a map-------------------------------------*/
 
