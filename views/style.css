@@ -212,15 +212,27 @@
 }
 
 #savedemail {
+  width:90%;
   position:absolute;
   width: 75%;
   top:5%;
-  left:12%;
+  left:5%;
 }
 
 #savedshow {
+  width:90%;
   position:absolute;
   width: 75%;
   top: 15%;
-  left:12%;
+  left:5%;
+}
+
+#displaysaved {
+  width:90%;
+  height:73.5%;
+  position:absolute;
+  top:23%;
+  left:2.5%;
+  border-width: thick;
+  border-style: solid;
 }
