@@ -1,22 +1,25 @@
 //const fs = require('fs');
 
-/*-------------------------DICTIONARY OF COUNTRIES AND PLACES---------------------------------------------------*/
+/*-------------------------JSON OF COUNTRIES AND PLACES---------------------------------------------------*/
 
 var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
                             },
                          locations: [{
                              title:'Banff National Park',
+                             address:'Banff National Park, Improvement District No. 9, AB T0L',
                              coor: {
                                  lat: 51.4968,
                                  lng: -115.9281},
                              picture: "pictures/banffpark.jpg"},{
                             title: 'CN Tower',
+                            address: '301 Front St W, Toronto, ON M5V 2T6',
                              coor: {
                                     lat: 43.6426,
                                     lng: -79.3871},
                              picture: "pictures/cntower.jpg"},{
                                title: 'Stanley Park',
+                               address: 'Vancouver, BC V6G 1Z4',
                              coor: {
                                     lat: 49.3017,
                                     lng: -123.1417},
@@ -28,6 +31,7 @@ var Countries= {Canada: {center: {
                             },
                          locations: [{
                            title: 'Central Park',
+                           address: 'New York, NY, USA',
                              coor: {
                                  lat: 40.7829,
                                  lng: -73.9654},
@@ -38,6 +42,7 @@ var Countries= {Canada: {center: {
                                     lng: -122.4783},
                              picture: "pictures/goldengatebridge.jpg"},{
                             title: 'Statue of Liberty',
+                            address: 'New York, NY 10004, USA',
                              coor: {
                                     lat: 40.6892,
                                     lng: -74.0445},
@@ -49,6 +54,7 @@ var Countries= {Canada: {center: {
                             },
                          locations: [{
                            title: 'Moscow Kremlin',
+                           address: 'Moscow, Russia, 103073',
                              coor: {
                                  lat: 55.7520,
                                  lng: 37.6175},
@@ -59,6 +65,7 @@ var Countries= {Canada: {center: {
                                     lng: 37.6208},
                              picture: "pictures/redsquare.jpg"},{
                             title: 'Hermitage Museum',
+                            address: 'Palace Square, 2, Sankt-Peterburg, Russia, 190000',
                              coor: {
                                     lat: 59.9398,
                                     lng: 30.3146},
@@ -70,16 +77,19 @@ var Countries= {Canada: {center: {
                             },
                          locations: [{
                            title: 'Tiananmen Square',
+                           address: 'Dongcheng, China',
                              coor: {
                                  lat:39.9055,
                                  lng: 116.3976},
                              picture: "pictures/tiananmensquare.jpg"},{
                             title: 'Forbidden City',
+                            address: '4 Jingshan Front St, Dongcheng Qu, Beijing Shi, China, 100006',
                              coor: {
                                     lat: 39.9163,
                                     lng: 116.3972},
                              picture: "pictures/forbiddencity.jpg"},{
                             title: 'Summer Palace',
+                            address: '19 Xinjiangongmen Rd, Haidian Qu, China, 100000',
                              coor: {
                                     lat: 40.0000,
                                     lng: 116.2755},
@@ -93,16 +103,19 @@ var Countries= {Canada: {center: {
                             },
                          locations: [{
                            title: 'Kinkaku-ji',
+                           address: '1 Kinkakujicho, Kita, Kyoto, Kyoto Prefecture 603-8361, Japan',
                              coor: {
                                  lat:35.0394,
                                  lng: 135.7292},
                              picture: "pictures/kinkakuji.jpg"},{
                             title: 'Senso-ji',
+                            address: ' 2 Chome-3-1 Asakusa, Taitō, Tokyo 111-0032, Japan',
                              coor: {
                                     lat: 35.7148,
                                     lng: 139.7967},
                              picture: "pictures/sensoji.jpg"},{
                             title: 'Tokyo Tower',
+                            address: '4 Chome-2-8 Shibakoen, Minato, Tokyo 105-0011, Japan',
                              coor: {
                                     lat: 35.6586,
                                     lng: 139.7454},
@@ -115,16 +128,19 @@ var Countries= {Canada: {center: {
                             },
                          locations: [{
                            title: 'Pyramid of the Magician',
+                           address: 'Yucatán, Mexico',
                              coor: {
                                  lat:20.359444,
                                  lng: -89.771389},
                              picture: "pictures/uxmal.jpg"},{
                             title: 'Coba',
+                            address: 'Km. 47, Carretera Federal Tulum 307, 77793 Cobá, Q.R., Mexico',
                              coor: {
                                     lat: 20.49472,
                                     lng: -87.736111},
                              picture: "pictures/coba.jpg"},{
                             title: 'Monte Alban',
+                            address: 'Oaxaca, Mexico',
                              coor: {
                                     lat: 17.043889,
                                     lng: -96.767778},
