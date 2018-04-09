@@ -137,73 +137,51 @@
     width:15%;
 }
 
-#firstcountryinfo {
+.countryinfo {
     position: absolute;
     height: 25%;
     width: 20%;
-    right: 22%;
-    top: 10%;
     border-style: solid;
     border-width: thick;
     display: none;
+}
+
+#firstcountryinfo {
+    right: 22%;
+    top: 10%;
 }
 
 #secondcountryinfo {
-    position: absolute;
-    height: 25%;
-    width: 20%;
     top:37.5%;
     right: 22%;
-    border-style: solid;
-    border-width: thick;
-    display: none;
 }
 
 #thirdcountryinfo {
-    position: absolute;
-    height: 25%;
-    width: 20%;
     right: 22%;
     top:65.5%;
-    border-style: solid;
-    border-width: thick;
-    display: none;
+}
+
+.arrow{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-image: url(pictures/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
 }
 
 #arrowone{
-    position: absolute;
-    height: 20px;
-    width: 20px;
     top:20%;
     right:20.6%;
-    background-image: url(pictures/arrow.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
-
 }
 
 #arrowtwo{
-    position: absolute;
-    height: 20px;
-    width: 20px;
     top:50%;
     right:20.6%;
-    background-image: url(pictures/arrow.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
 }
 
-
 #arrowthree{
-    position: absolute;
-    height: 20px;
-    width: 20px;
     top:75%;
     right: 20.6%;
-    background-image: url(pictures/arrow.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
 }
