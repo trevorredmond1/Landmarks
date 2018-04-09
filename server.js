@@ -11,10 +11,6 @@ app.set('view engine', 'hbs');
 
 //main page
 app.get('/', (request, response) => {
-  response.render('mainapp.hbs');
-});
-
-app.get('/main', (request, response) => {
   response.sendFile(__dirname + '/views/mainapp.html');
 });
 

@@ -234,3 +234,29 @@ document.getElementById('Mexico').addEventListener("click", function(){
         changeImage(i, Countries.Mexico.locations[i].picture)
     }
 });
+
+/*----------------------------------makes info for clicking on picture-------------*/
+
+function showMe(whichdiv, whicharrow){
+    var info = whichdiv;
+    var pointer = whicharrow;
+    if (info.style.display == "none" && pointer.style.display == "none") {
+        info.style.display = "block";
+        pointer.style.display = "block";
+    } else {
+        info.style.display = "none";
+        pointer.style.display = "none";
+    }
+}
+
+document.getElementById('firstcountry').addEventListener("click", function(){
+  showMe(document.getElementById("firstcountryinfo"), document.getElementById("arrowone"));
+});
+
+document.getElementById('secondcountry').addEventListener("click", function(){
+  showMe(document.getElementById("secondcountryinfo"), document.getElementById("arrowtwo"));
+})
+
+document.getElementById('thirdcountry').addEventListener("click", function(){
+  showMe(document.getElementById("thirdcountryinfo"), document.getElementById("arrowthree"));
+})
