@@ -4,14 +4,17 @@ var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
                             },
                          locations: [{
+                             title:'Banff National Park',
                              coor: {
                                  lat: 51.4968,
                                  lng: -115.9281},
                              picture: "pictures/banffpark.jpg"},{
+                            title: 'CN Tower',
                              coor: {
                                     lat: 43.6426,
                                     lng: -79.3871},
                              picture: "pictures/cntower.jpg"},{
+                               title: 'Stanley Park',
                              coor: {
                                     lat: 49.3017,
                                     lng: -123.1417},
@@ -22,14 +25,17 @@ var Countries= {Canada: {center: {
                             coor: {lat: 38.4968, lng: -100}
                             },
                          locations: [{
+                           title: 'Central Park',
                              coor: {
                                  lat: 40.7829,
                                  lng: -73.9654},
                              picture: "pictures/centralpark.jpg"},{
+                            title: 'Golden Gate Bridge',
                              coor: {
                                     lat: 37.8199,
                                     lng: -122.4783},
                              picture: "pictures/goldengatebridge.jpg"},{
+                            title: 'Statue of Liberty',
                              coor: {
                                     lat: 40.6892,
                                     lng: -74.0445},
@@ -40,14 +46,17 @@ var Countries= {Canada: {center: {
                             coor: {lat: 58.7520, lng: 33.6175}
                             },
                          locations: [{
+                           title: 'Moscow Kremlin',
                              coor: {
                                  lat: 55.7520,
                                  lng: 37.6175},
                              picture: "pictures/moscowkremlin.jpg"},{
+                            title: 'Red Square',
                              coor: {
                                     lat: 55.7539,
                                     lng: 37.6208},
                              picture: "pictures/redsquare.jpg"},{
+                            title: 'Hermitage Museum',
                              coor: {
                                     lat: 59.9398,
                                     lng: 30.3146},
@@ -58,14 +67,17 @@ var Countries= {Canada: {center: {
                             coor: {lat: 39.95, lng: 116.3}
                             },
                          locations: [{
+                           title: 'Tiananmen Square',
                              coor: {
                                  lat:39.9055,
                                  lng: 116.3976},
                              picture: "pictures/tiananmensquare.jpg"},{
+                            title: 'Forbidden City',
                              coor: {
                                     lat: 39.9163,
                                     lng: 116.3972},
                              picture: "pictures/forbiddencity.jpg"},{
+                            title: 'Summer Palace',
                              coor: {
                                     lat: 40.0000,
                                     lng: 116.2755},
@@ -78,14 +90,17 @@ var Countries= {Canada: {center: {
                               lng: 137.7292}
                             },
                          locations: [{
+                           title: 'Kinkaku-ji',
                              coor: {
                                  lat:35.0394,
                                  lng: 135.7292},
                              picture: "pictures/kinkakuji.jpg"},{
+                            title: 'Senso-ji',
                              coor: {
                                     lat: 35.7148,
                                     lng: 139.7967},
                              picture: "pictures/sensoji.jpg"},{
+                            title: 'Tokyo Tower',
                              coor: {
                                     lat: 35.6586,
                                     lng: 139.7454},
@@ -97,14 +112,17 @@ var Countries= {Canada: {center: {
                                  lng: -93.7292}
                             },
                          locations: [{
+                           title: 'Pyramid of the Magician',
                              coor: {
                                  lat:20.359444,
                                  lng: -89.771389},
                              picture: "pictures/uxmal.jpg"},{
+                            title: 'Coba',
                              coor: {
                                     lat: 20.49472,
                                     lng: -87.736111},
                              picture: "pictures/coba.jpg"},{
+                            title: 'Monte Alban',
                              coor: {
                                     lat: 17.043889,
                                     lng: -96.767778},
@@ -129,10 +147,20 @@ var Countries= {Canada: {center: {
 
  }
 
+function addInfoWindow(marker, message) {
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: message
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
 /*-------------------------------Changes the map markers-------------------------------*/
 
 function changeMap(center, locations, zoom) {
-        var marker =""
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: zoom,
           center: center
@@ -141,14 +169,17 @@ function changeMap(center, locations, zoom) {
         var locations = locations;
 
         for (var i =0; i < locations.length; i++){
-        marker = new google.maps.Marker({
-          position: locations[i].coor,
-          map: map
-        });
-      }
+         marker = new google.maps.Marker({
+            position: locations[i].coor,
+            animation: google.maps.Animation.DROP,
+            map: map
+          });
+
+          addInfoWindow(marker,"<p><b>" + locations[i].title + "</b></p>")
+        }
       }
 
-/*------------------------------------Changes the images on the left side---------------------------*/
+/*------------------------------------Changes the images on the right side---------------------------*/
 
 function changeImage(div, image){
   if (div == 0){
