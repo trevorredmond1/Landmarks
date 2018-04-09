@@ -196,7 +196,7 @@
 #text {
     position: absolute;
     bottom:30%;
-    left: 20%;
+    left: 23%;
     display: block;
 }
 
@@ -233,4 +233,11 @@
   left:2.5%;
   border-width: thick;
   border-style: solid;
+}
+
+.infotitle {
+  color: white;
+  position:absolute;
+  text-align: center;
+  top: 10%;
 }
