@@ -214,7 +214,6 @@
 #savedemail {
   width:90%;
   position:absolute;
-  width: 75%;
   top:5%;
   left:5%;
 }
@@ -222,7 +221,6 @@
 #savedshow {
   width:90%;
   position:absolute;
-  width: 75%;
   top: 15%;
   left:5%;
 }
