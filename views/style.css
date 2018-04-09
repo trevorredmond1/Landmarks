@@ -186,14 +186,14 @@
     background-color: rgba(0,0,0,0.7);
 }
 
-#save {
+.save {
     position: absolute;
     bottom: 10%;
     left: 42%;
     display: block;
 }
 
-#text {
+.text {
     position: absolute;
     bottom:30%;
     left: 23%;
