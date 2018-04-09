@@ -37,6 +37,7 @@ var Countries= {Canada: {center: {
                                  lng: -73.9654},
                              picture: "pictures/centralpark.jpg"},{
                             title: 'Golden Gate Bridge',
+                            address: 'Golden Gate Bridge, San Francisco, CA, USA',
                              coor: {
                                     lat: 37.8199,
                                     lng: -122.4783},
@@ -60,6 +61,7 @@ var Countries= {Canada: {center: {
                                  lng: 37.6175},
                              picture: "pictures/moscowkremlin.jpg"},{
                             title: 'Red Square',
+                            address: 'Moscow, Russia',
                              coor: {
                                     lat: 55.7539,
                                     lng: 37.6208},
