@@ -206,7 +206,7 @@ function changeMap(center, locations, zoom) {
             map: map
           });
 
-          addInfoWindow(marker,"<p><b>" + locations[i].title + "</b></p>")
+          addInfoWindow(marker,"<p><b>" + locations[i].title + "</b></p><p>"+locations[i].address+"</p>")
         }
       }
 
