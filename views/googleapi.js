@@ -293,17 +293,21 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
 
 document.getElementById("save1").addEventListener("click", function(){
   var entry = document.getElementById("title1").innerHTML;
-  favouritesList.push[entry];
+  favouritesList.push(entry);
+  console.log(favouritesList);
 });
 
 document.getElementById("save2").addEventListener("click", function(){
   var entry = document.getElementById("title2").innerHTML;
-  favouritesList.push[entry];
+  favouritesList.push(entry);
+  console.log(favouritesList);
 });
 
 document.getElementById("save3").addEventListener("click", function(){
   var entry = document.getElementById("title3").innerHTML;
-  favouritesList.push[entry];
+  console.log(entry);
+  favouritesList.push(entry);
+  console.log(favouritesList);
 });
 
 document.getElementById('savedshow').addEventListener("click", function(){
