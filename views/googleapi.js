@@ -156,19 +156,6 @@ var Countries= {Canada: {center: {
 
 /*---------------------FUNCTIONS-------------------------------*/
 
-/*--------------------------Save locations-----------------------------*/
-function Savelocations(button,location){
-  name = document.getElementById('email').innerHTML
-  fs.writeFile(name+'.json', 'utf8', (err, data) => {
-    if (err){
-      console.log(err);
-    } else {
-      obj = JSON.parse(data);
-      obj.saved_locations.push({name: location})
-    }
-  })
-}
-
 /*---------------------Initializes a map-------------------------------------*/
 
  function initMap() {
