@@ -305,3 +305,9 @@ document.getElementById("save3").addEventListener("click", function(){
   var entry = document.getElementById("title3").innerHTML;
   favouritesList.push[entry];
 });
+
+document.getElementById('savedshow').addEventListener("click", function(){
+  for (var n in favouritesList){
+    document.getElementById('displaysaved').innerHTML += favouritesList[n]+"<br>"
+}
+})
