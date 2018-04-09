@@ -213,12 +213,14 @@
 
 #savedemail {
   position:absolute;
+  width: 75%;
   top:5%;
   left:12%;
 }
 
 #savedshow {
   position:absolute;
+  width: 75%;
   top: 15%;
   left:12%;
 }
