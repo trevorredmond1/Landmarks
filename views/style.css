@@ -159,22 +159,29 @@
 
 
 #firstcountryinfo {
-    right: 22%;
-    top: 10%;
+    top: 9%;
+    height: 25%;
+    width:20%;
+    right:1%;
     display: none;
     background-color: rgba(0,0,0,0.7);
 }
 
 #secondcountryinfo {
-    top:37.5%;
-    right: 22%;
+    top:37%;
+    height: 25%;
+    width:20%;
+    right:1%;
     display: none;
     background-color: rgba(0,0,0,0.7);
 }
 
 #thirdcountryinfo {
     right: 22%;
-    top:65.5%;
+    top:65%;
+    height: 25%;
+    width:20%;
+    right:1%;
     display: none;
     background-color: rgba(0,0,0,0.7);
 }
