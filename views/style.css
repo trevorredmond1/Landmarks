@@ -214,12 +214,14 @@
 #savedemail {
   width:90%;
   position:absolute;
+  height:5%;
   top:5%;
   left:5%;
 }
 
 #savedshow {
   width:90%;
+  height:6%;
   position:absolute;
   top: 15%;
   left:5%;
