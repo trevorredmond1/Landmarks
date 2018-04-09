@@ -2,6 +2,8 @@
 
 /*-------------------------JSON OF COUNTRIES AND PLACES---------------------------------------------------*/
 
+var favouritesList = [];
+
 var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
                             },
@@ -289,6 +291,17 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
 
 /*-----------------------------------------get email info---------------------------*/
 
-document.getElementById("save").addEventListener("click", function(){
-  var entry = document.getElementById("text").value;
+document.getElementById("save1").addEventListener("click", function(){
+  var entry = document.getElementById("title1").innerHTML;
+  favouritesList.push[entry];
+});
+
+document.getElementById("save2").addEventListener("click", function(){
+  var entry = document.getElementById("title2").innerHTML;
+  favouritesList.push[entry];
+});
+
+document.getElementById("save3").addEventListener("click", function(){
+  var entry = document.getElementById("title3").innerHTML;
+  favouritesList.push[entry];
 });
