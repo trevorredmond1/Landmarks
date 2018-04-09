@@ -1,14 +1,16 @@
 var fs = require('fs');
 
-var email = 'trevor@email.com';
-var location = 'Golden Gate Bridge';
+var email = 'linden@email.com';
+var location = 'CN Tower';
+
+var object = {
+  name: 'Name',
+  location: []
+}
 
 var add = (name) => {
-	var read = fs.readFileSync('data.JSON');
-	var parse = JSON.parse(read);
-	var add = `${name}: {"location": []}`;
-	parse.push(add);
-	fs.writeFileSync('filetest.json', JSON.stringify(parse));
+	object.name = name;
+	fs.writeFileSync('data.json', JSON.stringify(object));
 };
 
 //module.exports.add = function(name) {
