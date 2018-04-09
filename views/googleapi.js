@@ -235,14 +235,14 @@ function changeImage(div, image, dtitle){
 document.getElementById('Canada').addEventListener("click", function(){
     changeMap(Countries.Canada.center.coor,Countries.Canada.locations,Countries.Canada.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Canada.locations[i].picture, Countries.Canada.location[i].title)
+        changeImage(i, Countries.Canada.locations[i].picture, Countries.Canada.locations[i].title)
     }
 });
 
 document.getElementById('USA').addEventListener("click", function(){
     changeMap(Countries.USA.center.coor,Countries.USA.locations,Countries.USA.zoom)
     for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.USA.locations[i].picture, Countries.Canada.location[i].title)
+        changeImage(i, Countries.USA.locations[i].picture, Countries.Canada.locations[i].title)
     }
 });
 
