@@ -291,23 +291,47 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
 
 /*-----------------------------------------get email info---------------------------*/
 
+function check(entry, list) {
+  var value = 0;
+  for (i=0; i>list.length;i++){
+    if (entry === list[i]){
+      return false;
+    }
+  }
+return true;
+}
+
 document.getElementById("save1").addEventListener("click", function(){
   var entry = document.getElementById("title1").innerHTML;
-  favouritesList.push(entry);
-  console.log(favouritesList);
+  var test = check(entry, favouritesList);
+  if (test === false) {
+    console.log('Location already in list!');
+  }
+  else {
+      favouritesList.push(entry);
+  }
 });
 
 document.getElementById("save2").addEventListener("click", function(){
   var entry = document.getElementById("title2").innerHTML;
-  favouritesList.push(entry);
-  console.log(favouritesList);
+  var test = check(entry, favouritesList);
+  if (test === false) {
+    console.log('Location already in list!');
+  }
+  else {
+      favouritesList.push(entry);
+  }
 });
 
 document.getElementById("save3").addEventListener("click", function(){
   var entry = document.getElementById("title3").innerHTML;
-  console.log(entry);
-  favouritesList.push(entry);
-  console.log(favouritesList);
+  var test = check(entry, favouritesList);
+  if (test === false) {
+    console.log('Location already in list!');
+  }
+  else {
+      favouritesList.push(entry);
+  }
 });
 
 document.getElementById('savedshow').addEventListener("click", function(){
@@ -315,4 +339,4 @@ document.getElementById('savedshow').addEventListener("click", function(){
   for (var n in favouritesList){
     document.getElementById('displaysaved').innerHTML += "" + favouritesList[n]+"<br>"
 }
-})
+});
