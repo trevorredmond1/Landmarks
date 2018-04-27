@@ -1,7 +1,6 @@
 <?php
 session_start();
 //starts of session inside website
-
 ?>
 
 <!DOCTYPE html> 
