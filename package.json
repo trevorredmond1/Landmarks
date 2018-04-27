@@ -23,5 +23,9 @@
     "hbs": "^4.0.1",
     "request": "^2.85.0",
     "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
   }
 }
