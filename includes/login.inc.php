@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 
-	print ("Hi ");
+	print ("Hiiiii ");
 	print htmlspecialchars($_POST['uid']);
 	//error handlers
 	//checl if inputs are empty
@@ -41,8 +41,15 @@ if(isset($_POST['submit'])){
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
-					/*header("Location: ../index.php?login=success");
-					exit();*/
+
+					header("Location: ../views/mainapp.php?login=success");
+					//header("Location: /views/mainapp.html");
+					//echo '<a href="/views/mainapp.html">CSS Tutorial</a>';
+
+					//include('views/mainapp.php');
+
+
+					//exit();
 
 				}
 			}

@@ -160,6 +160,10 @@ var Countries= {Canada: {center: {
 
 /*---------------------Initializes a map-------------------------------------*/
 
+/**
+ * [initializes the google map]
+ * @return {[none]} [Does not return anything]
+ */
  function initMap() {
         var marker =""
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -169,6 +173,11 @@ var Countries= {Canada: {center: {
 
  }
 
+/**
+ * [Infobox for when you click on one of the placemarkers]
+ * @param {[string]} marker  [the marker where you will be creating the info box]
+ * @param {[string]} message [the description of the landmark]
+ */
 function addInfoWindow(marker, message) {
 
             var infoWindow = new google.maps.InfoWindow({
@@ -182,6 +191,13 @@ function addInfoWindow(marker, message) {
 
 /*-------------------------------Changes the map markers-------------------------------*/
 
+/**
+ * [changes the map markers]
+ * @param  {[dictionary]} center    [dictionary of lat/long]
+ * @param  {[list]} locations [list of locations for the country]
+ * @param  {[int]} zoom      [the zoom variable for the map markers]
+ * @return {[none]}           [does not return. used to initialize the markers]
+ */
 function changeMap(center, locations, zoom) {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: zoom,
@@ -203,6 +219,13 @@ function changeMap(center, locations, zoom) {
 
 /*------------------------------------Changes the images on the right side---------------------------*/
 
+/**
+ * [function used to change the images shown for the landmarks]
+ * @param  {[int]} div    [number used to specify what div image is being changed]
+ * @param  {[string]} image  [url of the new image]
+ * @param  {[string]} dtitle [title of the landmark]
+ * @return {[none]}        [no return. changes the image.]
+ */
 function changeImage(div, image, dtitle){
   if (div == 0){
     document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")";
@@ -289,8 +312,16 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
             showthirdcountry.style.display="none";
         });
 
+//jfsdlk
+
 /*-----------------------------------------get email info---------------------------*/
 
+/**
+ * [function created to check if title is already in added list.]
+ * @param  {[string]} entry [title of the landmark being checked for]
+ * @param  {[list]} list  [list the title is being stored into]
+ * @return {[Boolean]}       [returns a boolean value for the check.]
+ */
 function check(entry, list) {
   var value = 0;
   for (i=0; i>list.length;i++){
