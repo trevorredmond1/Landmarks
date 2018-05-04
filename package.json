@@ -10,7 +10,6 @@
     "connect-flash": "*",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "~4.16.0",
     "express-messages": "*",
     "express-session": "^1.15.6",
     "express-validator": "*",
@@ -23,5 +22,14 @@
     "passport-http": "*",
     "passport-local": "*",
     "serve-favicon": "*"
+    "express": "*",
+    "fs": "file:node_modules/fs",
+    "hbs": "^4.0.1",
+    "request": "^2.85.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
   }
 }
