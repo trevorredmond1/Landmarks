@@ -1,0 +1,88 @@
+
+.astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.astext:hover{
+  color: #1943B7;
+  cursor: pointer;
+}
+.full-overlay{
+  position: relative;
+  z-index: 1;
+  height:350px;
+  text-align: center;
+  padding:40px;
+  background-size: cover;
+}
+
+.main-text {
+position: absolute;
+top: 30%;
+width: 42%;
+color:#ECE9E7;
+font-weight: bold;
+font-size: 28px;
+}
+
+.main-text h1 {
+font-family: 'Montserrat', sans-serif;
+color: #ECE9E7;
+font-size: 80px;
+}
+
+/*         overlay styles */
+h1 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin-bottom: 0;
+    font-size: 49px;
+}
+
+.carousel-item{
+   -webkit-filter: brightness(29%);
+    filter:brightness(29%);
+}
+
+.main-texttwo {
+  position: absolute;
+  top: 30%;
+  right: 11.5%;
+  width: 30%;
+  height: 300px;
+  background-color: #ECE9E7;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 20px 20px 20px 20px;
+  transition: 1s;
+
+
+}
+
+.main-container{
+    width: 450px;
+    height: 200px;
+}
+.main-wrapper{
+    margin: auto;
+    background-color: #ccc;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+#signupform{
+  display: none;
+}
+
+#loginform{
+  display: block;
+
+}
