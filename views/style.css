@@ -235,6 +235,7 @@
   left:2.5%;
   border-width: thick;
   border-style: solid;
+  overflow: auto;
 }
 
 .infotitle {
