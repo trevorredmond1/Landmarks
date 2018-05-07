@@ -5,11 +5,15 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Landmarks
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/full-slider.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Montserrat')
-    link(rel='stylesheet', href='/stylesheets/extra.css')
+    title
+      | Landmarks
+      title
+        // Bootstrap core CSS
+        link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        // Custom styles for this template
+        link(href='css/full-slider.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Lato|Montserrat', rel='stylesheet')
+        link(href='extra.css', rel='stylesheet')
   body.overlay
     header
       #carouselExampleIndicators.carousel.slide(data-ride='carousel')
@@ -30,9 +34,9 @@ html(lang='en')
             #maintext2.main-texttwo.hidden-xs
               .col-md-12.text-left
                 h2.page-header
-                  button#login.astext Login |  
+                  button#login.astext Login 
+                  |  
                   button#signup.astext Sign Up
-
                 form#loginform(method='post', action='/users/login')
                   .form-group
                   label Username 
@@ -42,26 +46,26 @@ html(lang='en')
                   input.form-control(name='password', type='password', placeholder='Enter password')
                   p
                   input.btn.btn-primary(type='submit', name='submit', value='Login')
-
                 form#signupform(method='post', action='/users/register', enctype='multipart/form-data')
                   .form-group
                   label Name 
-                  input.form-control(name='name', type='text', placeholder='Enter name')
+                  input#inputsm.form-control(name='name', type='text', placeholder='Enter name')
                   .form-group
                   label Email 
-                  input.form-control(name='email', type='email', placeholder='Enter Email')
+                  input#inputsm.form-control(name='email', type='email', placeholder='Enter Email')
                   .form-group
                   label Username 
-                  input.form-control(name='username', type='text', placeholder='Enter User name')
+                  input#inputsm.form-control(name='username', type='text', placeholder='Enter User name')
                   .form-group
                   label Password
-                  input.form-control(name='password', type='password', placeholder='Enter password')
+                  input#inputsm.form-control(name='password', type='password', placeholder='Enter password')
                   .form-group
                   label Confirm Passwords
-                  input.form-control(name='password2', type='password', placeholder='Confirm password')
+                  input#inputsm.form-control(name='password2', type='password', placeholder='Confirm password')
                   p
                   input.btn.btn-primary(type='submit', name='submit', value='Register')
-    script(src='/javascripts/extra.js')
-    script(src='/javascripts/jquery.min.js')
-    script(src='/javascripts/bootstrap.bundle.min.js')
-    script(src='/javascripts/bootstrap1.js')
+    // Bootstrap core JavaScript
+    script(src='extra.js')
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+    script(src='/javascripts/bootstrap.js')
