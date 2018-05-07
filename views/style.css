@@ -252,3 +252,20 @@
   font-family: sans-serif;
   font-size: 3vw;
 }
+
+#logoutdiv{
+    border-style: solid;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: 275px;
+    height: 80px;
+}
+
+#logout {
+    position: absolute;
+    width:100px;
+    height:40px;
+    top:20px;
+    right: 20px;
+}
