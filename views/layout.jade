@@ -1,67 +1,34 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content='')
-    meta(name='author', content='')
-    title Landmarks
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/full-slider.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Montserrat')
-    link(rel='stylesheet', href='/stylesheets/extra.css')
-  body.overlay
-    header
-      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
-        ol.carousel-indicators
-          li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
-          li(data-target='#carouselExampleIndicators', data-slide-to='1')
-          li(data-target='#carouselExampleIndicators', data-slide-to='2')
-        .carousel-inner(role='listbox')
-          .carousel-item.active(style="background-image: url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg')")
-          .carousel-item(style="background-image: url('https://images.centrometeoitaliano.it/wp-content/uploads/2014/03/12/macchu-picchu.jpg')")
-          .carousel-item(style="background-image: url('https://culturebox.francetvinfo.fr/sites/default/files/filefield_paths/024_2883063.jpg')")
-          .container
-            .main-text.hidden-xs
-              .col-md-12.text-left
-                h1(style="font-family: 'Lato';") Country Landmarks
-                p(style="font-family: 'Lato';")
-                  | It wasn’t until recently that we actually realized just how much we love carrot cake.
-            #maintext2.main-texttwo.hidden-xs
-              .col-md-12.text-left
-                h2.page-header
-                  button#login.astext Login |  
-                  button#signup.astext Sign Up
-
-                form#loginform(method='post', action='/users/login')
-                  .form-group
-                  label Username 
-                  input.form-control(name='username', type='text', placeholder='Enter User name')
-                  .form-group
-                  label Password
-                  input.form-control(name='password', type='password', placeholder='Enter password')
-                  p
-                  input.btn.btn-primary(type='submit', name='submit', value='Login')
-
-                form#signupform(method='post', action='/users/register', enctype='multipart/form-data')
-                  .form-group
-                  label Name 
-                  input.form-control(name='name', type='text', placeholder='Enter name')
-                  .form-group
-                  label Email 
-                  input.form-control(name='email', type='email', placeholder='Enter Email')
-                  .form-group
-                  label Username 
-                  input.form-control(name='username', type='text', placeholder='Enter User name')
-                  .form-group
-                  label Password
-                  input.form-control(name='password', type='password', placeholder='Enter password')
-                  .form-group
-                  label Confirm Passwords
-                  input.form-control(name='password2', type='password', placeholder='Confirm password')
-                  p
-                  input.btn.btn-primary(type='submit', name='submit', value='Register')
-    script(src='/javascripts/extra.js')
-    script(src='/javascripts/jquery.min.js')
-    script(src='/javascripts/bootstrap.bundle.min.js')
-    script(src='/javascripts/bootstrap1.js')
+    head
+        title Welcome
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        .navbar.navbar-default(role='navigation')
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button',data-toggle='collapse',data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#') Country Landmarks
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        if user 
+                            li(class=(title=='Members' ? 'active' : ''))
+                                a(href='/') Members
+                        if !user
+                            li(class=(title=='Register' ? 'active' : ''))
+                                a(href='/users/register') Register
+                            li(class=(title=='Login' ? 'active' : ''))
+                                a(href='/users/login') Login
+                    ul.nav.navbar-nav.navbar-right
+                        if user
+                            li
+                                a(href='/users/logout') Logout    
+        .container 
+            != messages()
+            block content
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+        script(src='/javascripts/bootstrap.js')
