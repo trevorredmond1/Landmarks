@@ -19,13 +19,13 @@ var Countries= {Canada: {center: {
                              coor: {
                                     lat: 43.6426,
                                     lng: -79.3871},
-                             picture: "pictures/cntower.jpg"},{
+                             picture: 'pictures/cntower.jpg'},{
                                title: 'Stanley Park',
                                address: 'Vancouver, BC V6G 1Z4',
                              coor: {
                                     lat: 49.3017,
                                     lng: -123.1417},
-                             picture: "pictures/stanleypark.jpg"}],
+                             picture: 'pictures/stanleypark.jpg'}],
                          zoom: 4
                         },
                 USA: {center: {
@@ -228,15 +228,15 @@ function changeMap(center, locations, zoom) {
  */
 function changeImage(div, image, dtitle){
   if (div == 0){
-    document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('firstcountry').style.backgroundImage = "url(/" + image + ")";
     document.getElementById('title1').innerHTML= dtitle
   }
   else if (div == 1){
-    document.getElementById('secondcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('secondcountry').style.backgroundImage = "url(/" + image + ")";
     document.getElementById('title2').innerHTML = dtitle
   }
   else if (div == 2){
-    document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")";
+    document.getElementById('thirdcountry').style.backgroundImage = "url(/" + image + ")";
     document.getElementById('title3').innerHTML= dtitle
   }
 
