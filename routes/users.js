@@ -11,18 +11,19 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-/*router.get('/register', function(req, res, next) {
+router.get('/register', function(req, res, next) {
   res.render('register',{title:'Register'});
 });
 
 router.get('/login', function(req, res, next) {
   res.render('login',{title:'Login'});
-});*/
+});
 
 router.post('/login',
   passport.authenticate('local',{failureRedirect:'/users/login', failureFlash: 'Invalid username or password'}),
   function(req, res) {
- 	req.flash('success','You are now logged in');
+  
+ 	req.flash('success','You are now logged in', req.body.username);
  	res.redirect('/');
   });
 
@@ -36,7 +37,6 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-
 
 
 passport.use(new LocalStrategy(function(username, password, done){
@@ -59,7 +59,7 @@ passport.use(new LocalStrategy(function(username, password, done){
 
 
 
-router.post('/register' , function(req, res, next) {
+router.post('/register', upload.single('profileimage') , function(req, res, next) {
 	//console.log(req.body.name);
 	var name = req.body.name;
 	var email = req.body.email;
@@ -68,14 +68,6 @@ router.post('/register' , function(req, res, next) {
 	var password2 = req.body.password2;
 
 	console.log(req.file);
-
-	if(req.file){
-		console.log('Uploading File..');
-		var profileimage = req.file.filename;
-	}else{
-		console.log('No file uploaded..');
-		var profileimage = 'noimage.jpg';
-	}
 
 	//form validator 
 	req.checkBody('name','Name field is required').notEmpty();
@@ -100,7 +92,8 @@ router.post('/register' , function(req, res, next) {
 			email: email,
 			username: username,
 			password: password,
-			profileimage: profileimage
+			favlands: []
+			//profileimage: profileimage
 		});
 
 		User.createUser(newUser, function(err, user){
