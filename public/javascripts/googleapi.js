@@ -2,6 +2,7 @@
 
 /*-------------------------JSON OF COUNTRIES AND PLACES---------------------------------------------------*/
 
+
 var favouritesList = [];
 
 var Countries= {Canada: {center: {
@@ -154,8 +155,6 @@ var Countries= {Canada: {center: {
 
             }
 
-
-
 /*---------------------FUNCTIONS-------------------------------*/
 
 /*---------------------Initializes a map-------------------------------------*/
@@ -228,91 +227,40 @@ function changeMap(center, locations, zoom) {
  */
 function changeImage(div, image, dtitle){
   if (div == 0){
-    document.getElementById('firstcountry').style.backgroundImage = "url(/" + image + ")";
+    document.getElementById('firstcountry').style.backgroundImage = "url(" + image + ")";
     document.getElementById('title1').innerHTML= dtitle
   }
   else if (div == 1){
-    document.getElementById('secondcountry').style.backgroundImage = "url(/" + image + ")";
+    document.getElementById('secondcountry').style.backgroundImage = "url(" + image + ")";
     document.getElementById('title2').innerHTML = dtitle
   }
   else if (div == 2){
-    document.getElementById('thirdcountry').style.backgroundImage = "url(/" + image + ")";
+    document.getElementById('thirdcountry').style.backgroundImage = "url(" + image + ")";
     document.getElementById('title3').innerHTML= dtitle
   }
 
 }
 
-/*-----------------------------COUNTRY BUTTONS-----------------------------------*/
-
-document.getElementById('Canada').addEventListener("click", function(){
-    changeMap(Countries.Canada.center.coor,Countries.Canada.locations,Countries.Canada.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Canada.locations[i].picture, Countries.Canada.locations[i].title)
-    }
-});
-
-document.getElementById('USA').addEventListener("click", function(){
-    changeMap(Countries.USA.center.coor,Countries.USA.locations,Countries.USA.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.USA.locations[i].picture, Countries.USA.locations[i].title)
-    }
-});
-
-document.getElementById('Russia').addEventListener("click", function(){
-    changeMap(Countries.Russia.center.coor,Countries.Russia.locations, Countries.Russia.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Russia.locations[i].picture, Countries.Russia.locations[i].title)
-    }
-});
-
-document.getElementById('China').addEventListener("click", function(){
-    changeMap(Countries.China.center.coor,Countries.China.locations, Countries.China.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.China.locations[i].picture, Countries.China.locations[i].title)
-    }
-});
-
-document.getElementById('Japan').addEventListener("click", function(){
-    changeMap(Countries.Japan.center.coor,Countries.Japan.locations, Countries.Japan.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Japan.locations[i].picture,  Countries.Japan.locations[i].title)
-    }
-});
-
-document.getElementById('Mexico').addEventListener("click", function(){
-    changeMap(Countries.Mexico.center.coor,Countries.Mexico.locations, Countries.Mexico.zoom)
-    for (var i = 0; i < 3; i++){
-        changeImage(i, Countries.Mexico.locations[i].picture, Countries.Mexico.locations[i].title)
-    }
-});
-
 /*----------------------------------makes info for clicking on picture-------------*/
 
-var showfirstcountry = document.getElementById("firstcountryinfo")
-        document.getElementById("firstcountry").addEventListener("mouseover", function() {
-            showfirstcountry.style.display="block";
-        });
-        showfirstcountry.addEventListener("mouseleave", function() {
-            showfirstcountry.style.display="none";
-        });
+//change to do something
 
-var showsecondcountry = document.getElementById("secondcountryinfo")
-        document.getElementById('secondcountry').addEventListener("mouseover", function() {
-            showsecondcountry.style.display="block";
-        });
-        showsecondcountry.addEventListener("mouseleave", function() {
-            showsecondcountry.style.display="none";
-        });
+function showCountry(country){
+  var showcount = document.getElementById(country+"info")
+    //document.getElementById(country).addEventListener("mouseover", function() {
+    showcount.style.display="block";
+    showcount.addEventListener("mouseleave", function() {
+        showcount.style.display="none";
+    });
+  }
 
-var showthirdcountry = document.getElementById("thirdcountryinfo")
-       document.getElementById('thirdcountry').addEventListener("mouseover", function() {
-            showthirdcountry.style.display="block";
-        });
-        showthirdcountry.addEventListener("mouseleave", function() {
-            showthirdcountry.style.display="none";
-        });
-
-//jfsdlk
+// var showfirstcountry = document.getElementById("firstcountryinfo")
+document.getElementById("firstcountry").addEventListener("mouseover", showCountry("firstcountry"));
+//             showfirstcountry.style.display="block";
+//         });
+//         showfirstcountry.addEventListener("mouseleave", function() {
+//             showfirstcountry.style.display="none";
+//         });
 
 /*-----------------------------------------get email info---------------------------*/
 
@@ -332,6 +280,8 @@ function check(entry, list) {
   return repeated
 }
 
+// Start of the save function
+
 document.getElementById("save1").addEventListener("click", function(){
   var entry = document.getElementById("title1").innerHTML;
   var test = check(entry, favouritesList);
@@ -342,6 +292,7 @@ document.getElementById("save1").addEventListener("click", function(){
       favouritesList.push(entry);
   }
 });
+
 
 document.getElementById("save2").addEventListener("click", function(){
   var entry = document.getElementById("title2").innerHTML;
@@ -362,6 +313,10 @@ document.getElementById("save3").addEventListener("click", function(){
   }
   else {
       favouritesList.push(entry);
+      var data = {
+        landname: entry
+      };
+      $.post('/saveland', data);
   }
 });
 
