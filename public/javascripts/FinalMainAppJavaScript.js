@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-
-    </style>
-  </head>
-  <body>
-      
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
+/*-------------------------MAP FUNCTIONS---------------------------------*/
 
 
-      <input  id="SearchBar" type="search" placeholder="Enter Location">
-      <button id="OpenCanada">Open the World</button>
-    <script>
-        
+        /**
+ * [initializes the google map]
+ * @return {[none]} [Does not return anything]
+ */
         function initMap() {
             var marker ="";
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -26,7 +12,12 @@
             center: {lat: 51.4968, lng: -115.9281}
         })
             };
-        
+
+/**
+ * [Infobox for when you click on one of the placemarkers]
+ * @param {[string]} marker  [the marker where you will be creating the info box]
+ * @param {[string]} message [the description of the landmark]
+ */        
         function addInfoWindow(marker, message) {
 
             var infoWindow = new google.maps.InfoWindow({
@@ -38,8 +29,12 @@
             });
         }
 
+/**
+ *[Uses AJAX to grab your location from the googlemaps API then runs the functions]
+ * @return {[none]} [Does not return anything]
+ */            
         function loadDoc(){ // Load up the API and place everything on the map properly
-            var newlocation = document.getElementById('SearchBar').value;
+            var newlocation = document.getElementById('countrysearch').value;
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function(){
                 if (this.readyState == 4 && this.status == 200) {
@@ -52,8 +47,10 @@
     }
         
         /*--------------------------Finding and Placing Landmarks on the map------------------------------*/
-        
-        //Grabbing the Location and making a JSON object
+/**
+ *[Does everything, places the markers, finds the pictures and places them in the box, centers the map to the new location]
+ *@return {[none]} [Does not return anything]
+ */
             function getLandmarks(json){
                 var landmarks = [];
                 var Results = json.results;
@@ -67,9 +64,9 @@
                 });
                 };
                 console.log(landmarks);
-
                 
                 //Finding each Latitude and longitude of each location to use as markers
+                
                 var locations = []
                 for (var i =0; i < landmarks.length; i++){
                     locations.push({lat: landmarks[i].latitude, lng: landmarks[i].longitude})
@@ -180,16 +177,7 @@
                 addInfoWindow(marker,"<p><b>" + landmarks[i].name + "</b></p><p>"+landmarks[i].address+"</p>")
             }
         };
-        
-        
-        document.getElementById('OpenCanada').addEventListener('click', function() {
+
+        document.getElementById('searchbutton').addEventListener('click', function() {
            loadDoc();
        });
-
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap">
-    </script>
-  </body>
-</html>
-
