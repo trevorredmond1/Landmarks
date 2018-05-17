@@ -45,6 +45,7 @@ router.post('/saveland',
     });
   });
 
+
 router.post('/saveland',
 	ensureAuthenticated,
   function(req, res) {
@@ -72,6 +73,7 @@ router.post('/saveland',
 		});
 	});
   });
+
 
 
 module.exports = router;
