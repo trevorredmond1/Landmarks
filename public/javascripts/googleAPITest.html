@@ -6,15 +6,17 @@
         height: 400px;
         width: 100%;
        }
-        
+
     </style>
   </head>
   <body>
       
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
+
       <input  id="SearchBar" type="search" placeholder="Enter Location">
       <button id="OpenCanada">Open the World</button>
+
     <script>
         
         function initMap() {
@@ -36,7 +38,6 @@
             });
         }
 
-            
         function loadDoc(){ // Load up the API and place everything on the map properly
             var newlocation = document.getElementById('SearchBar').value;
             var xhttp = new XMLHttpRequest();
@@ -66,9 +67,10 @@
                 });
                 };
                 console.log(landmarks);
+
                 
                 //Finding each Latitude and longitude of each location to use as markers
-                
+
                 var locations = []
                 for (var i =0; i < landmarks.length; i++){
                     locations.push({lat: landmarks[i].latitude, lng: landmarks[i].longitude})
@@ -191,3 +193,4 @@
     </script>
   </body>
 </html>
+
