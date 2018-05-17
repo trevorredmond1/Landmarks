@@ -32,6 +32,7 @@ app.set('view engine', 'jade');
 
 //handle file uploads
 
+const MongoClient = require('mongodb').MongoClient;
 
 
 app.use(logger('dev'));
